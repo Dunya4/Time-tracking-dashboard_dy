@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", serif;
+
+}
+:root{
+--Purple-600: hsl(246, 80%, 60%);
+--Orange-300: hsl(15, 100%, 70%);
+--Blue-300 : hsl(195, 74%, 62%);
+--Pink-400 : hsl(348, 100%, 68%);
+--Green-400 : hsl(145, 58%, 55%);
+--Purple-700 : hsl(264, 64%, 52%);
+--Yellow-300: hsl(43, 84%, 65%);
+--Navy-950: hsl(226, 43%, 10%);
+--Navy-900: hsl(235, 46%, 20%);
+--Purple-500: hsl(235, 45%, 61%);
+--Navy-200: hsl(236, 100%, 87%);
+}
+body{
+    background-color: var(--Navy-950);
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 2rem; */
+}
+.dashboard{
+
+    /* background-color: rgb(159, 194, 194); */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    height: 30rem;
+    width: 70%;
+}
+.card_user{
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 1rem;
+    /* overflow: hidden; */
+
+}
+.card_info{
+    height: 70%;
+    background-color: var(--Purple-700);
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem; */
+    /* border: 3px solid ; */
+    border-radius: 1rem;
+    color: white;
+    padding: 1.5rem;
+    z-index: 2;
+    margin-bottom: -1rem;
+    /* flex-grow: 1; */
+    
+}
+.card_info img{
+    width: 5rem;
+    /* height: 5rem; */
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+.card_info span{
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 300;
+
+}
+.card_info h1{
+    color: white;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.card_btn {
+    background-color: var(--Navy-900);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    padding:  2rem;
+    height: 40%;
+    
+}
+.card_btn button {
+border: none;
+background-color: var(--Navy-900);
+color: var(--Navy-200);
+font-size: 1rem;
+font-weight: 100;
+text-align: left;
+margin-top: 0.5rem;
+}
+.card_btn button:hover{
+color: white;
+cursor: pointer;
+}
+
+
+.card_work{
+    background-color: var(--Orange-300);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem ;
+}
+
+.card_img{
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+    /* z-index: 1; */
+}
+
+.card_time{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--Navy-900);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 5rem;
+    /* margin-top:1rem; */
+    color: white;
+    height: 25rem;
+
+}
+.card_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.card_time  h1{
+    font-weight: 300;
+}
+.card_time p{
+    font-size: 0.8rem;
+    color: var(--Navy-200);
+    
+}
+.card_play{
+    background-color: var(--Blue-300);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+
+.card_study{
+    background-color: var(--Pink-400);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.card_exercise{
+    background-color: var(--Green-400);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+
+}
+.card_social{
+    background-color: var(--Purple-500);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+
+}.card_selfcare{
+    background-color: var(--Yellow-300);
+    position: relative;    
+    overflow: hidden;
+    border-radius: 1rem;
+
+}
