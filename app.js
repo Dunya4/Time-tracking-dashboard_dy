@@ -42,19 +42,18 @@ const selfcaresHours = document.getElementById("selfcares_hours");
 const selfcaresLast = document.getElementById("selfcares_last-week");
 
 function update(){
-    let timeText = "hrs";
-    workHours.textContent = data[0].timeframes[active].current;
-    workLast.textContent = data[0].timeframes[active].previous;
-    playHours.textContent = data[1].timeframes[active].current;
-    playLast.textContent = data[1].timeframes[active].previous;
-    studyHours.textContent = data[2].timeframes[active].current;
-    studyLast.textContent = data[2].timeframes[active].previous;
-    exerciseHours.textContent = data[3].timeframes[active].current;
-    exerciseLast.textContent = data[3].timeframes[active].previous;
-    socialHours.textContent = data[4].timeframes[active].current;
-    socialLast.textContent = data[4].timeframes[active].previous;
-    selfcaresHours.textContent = data[5].timeframes[active].current;
-    selfcaresLast.textContent = data[5].timeframes[active].previous;
+    workHours.textContent = data[0].timeframes[active].current + "hrs";
+    workLast.textContent = "Last week" + " - " + data[0].timeframes[active].previous + "hrs";
+    playHours.textContent =  data[1].timeframes[active].current +"hrs";
+    playLast.textContent = "Last week" + " - "+ data[1].timeframes[active].previous +"hrs";
+    studyHours.textContent = data[2].timeframes[active].current +"hrs";
+    studyLast.textContent = "Last week" + " - " + data[2].timeframes[active].previous+"hrs";
+    exerciseHours.textContent = data[3].timeframes[active].current +"hrs";
+    exerciseLast.textContent = "Last week" + " - " + data[3].timeframes[active].previous +"hrs";
+    socialHours.textContent = data[4].timeframes[active].current +"hrs";
+    socialLast.textContent = "Last week" + " - " + data[4].timeframes[active].previous +"hrs";
+    selfcaresHours.textContent = data[5].timeframes[active].current +"hrs";
+    selfcaresLast.textContent = "Last week" + " - " + data[5].timeframes[active].previous +"hrs";
 
     switch(active){
         case "daily" :
