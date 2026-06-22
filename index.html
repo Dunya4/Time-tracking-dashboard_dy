@@ -1,174 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Time tracking dashboard</title>
-</head>
-<body>
-<div class="container">
-  <div class="dashboard">
-    <div class="card_user">
-     <div class="card_info">
-      <img class="user_image" src="images/image-jeremy.png" alt="user">
-      <span>Report for</span>
-      <h1>Jeremy <br>Robson</h1>
-     </div>
-     <div class="card_btn">
-      <button class="btn">Daily</button>
-      <button class="btn">Weekly</button>
-      <button class="btn">Montly</button>
-     </div>
-    </div>
-    <!-- right -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap"
+      rel="stylesheet">
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dashboard">
+        <div class="card_user">
+          <div class="card_info">
+            <img class="user_image" src="images/image-jeremy.png" alt="user">
+            <span>Report for</span>
+            <h1>Jeremy <br>Robson</h1>
+          </div>
+          <div class="card_btn">
+            <button class="btn" id="daily">Daily</button>
+            <button class="btn" id="weekly">Weekly</button>
+            <button class="btn" id="monthly">Monthly</button>
+          </div>
+        </div>
 
-    <div class="card_work">
-      <div class="card_head">
-        <img class="card_img" src="images/icon-work.svg" alt="">
-      </div>
-      <div class="card_time">
-        <div class="card_nav">
-          <h6>Work</h6>
-          <img src="images/icon-ellipsis.svg" alt="">
-        </div>
-        <h1>32hrs</h1>
-        <p>Last week -36hrs</p>
-      </div>
-    </div>
+        <div class="card_work">
+          <div class="card_head">
+            <img class="card_img" src="images/icon-work.svg" alt>
+          </div>
+          <div class="card_time">
+            <div class="card_nav">
+              <h6>Work</h6>
+              <img src="images/icon-ellipsis.svg" alt>
+            </div>
+            <div class="card_hours">
+              <h1 id="work_hours">32hrs</h1>
+              <p id="work_last-week">Last week -36hrs</p>
+            </div>
 
- <div class="card_play">
-      <div class="card_head">
-        <img class="card_img" src="images/icon-play.svg" alt="">
-      </div>
-      <div class="card_time">
-        <div class="card_nav">
-          <h6>Play</h6>
-          <img src="images/icon-ellipsis.svg" alt="">
+          </div>
         </div>
-        <h1>10hrs</h1>
-        <p>Last week -8hrs</p>
-      </div>
-    </div>
-    
-    <div class="card_study">
-      <div class="card_head">
-        <img class="card_img" src="images/icon-study.svg" alt="">
-      </div>
-      <div class="card_time">
-        <div class="card_nav">
-          <h6>Study</h6>
-          <img src="images/icon-ellipsis.svg" alt="">
-        </div>
-        <h1>4hrs</h1>
-        <p>Last week -7hrs</p>
-      </div>
 
-    </div> 
-    <div class="card_exercise">
-      <div class="card_head">
-        <img class="card_img" src="images/icon-exercise.svg" alt="">
-      </div>
-      <div class="card_time">
-        <div class="card_nav">
-          <h6>Exercise</h6>
-          <img src="images/icon-ellipsis.svg" alt="">
+        <div class="card_play">
+          <div class="card_head">
+            <img class="card_img" src="images/icon-play.svg" alt>
+          </div>
+          <div class="card_time">
+            <div class="card_nav">
+              <h6>Play</h6>
+              <img src="images/icon-ellipsis.svg" alt>
+            </div>
+            <div class="card_hours">
+              <h1 id="play_hours">10hrs</h1>
+              <p id="play_last-week">Last week -8hrs</p>
+            </div>
+          </div>
         </div>
-        <h1>4hrs</h1>
-        <p>Last week -5hrs</p>
-      </div>
-    </div> 
-    
-    <div class="card_social">
-      <div class="card_head">
-        <img class="card_img" src="images/icon-social.svg" alt="">
-      </div>
-      <div class="card_time">
-        <div class="card_nav">
-          <h6>Social</h6>
-          <img src="images/icon-ellipsis.svg" alt="">
+
+        <div class="card_study">
+          <div class="card_head">
+            <img class="card_img" src="images/icon-study.svg" alt>
+          </div>
+          <div class="card_time">
+            <div class="card_nav">
+              <h6>Study</h6>
+              <img src="images/icon-ellipsis.svg" alt>
+            </div>
+            <div class="card_hours">
+              <h1 id="study_hours">4hrs</h1>
+              <p id="study_last-week">Last week -7hrs</p>
+            </div>
+          </div>
+
         </div>
-        <h1>5hrs</h1>
-        <p>Last week -10hrs</p>
-      </div>
-    </div>
+        <div class="card_exercise">
+          <div class="card_head">
+            <img class="card_img" src="images/icon-exercise.svg" alt>
+          </div>
+          <div class="card_time">
+            <div class="card_nav">
+              <h6>Exercise</h6>
+              <img src="images/icon-ellipsis.svg" alt>
+            </div>
+            <div class="card_hours">
+              <h1 id="exercise_hours">4hrs</h1>
+              <p id="exercise_last-week">Last week -5hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_social">
+          <div class="card_head">
+            <img class="card_img" src="images/icon-social.svg" alt>
+          </div>
+          <div class="card_time">
+            <div class="card_nav">
+              <h6>Social</h6>
+              <img src="images/icon-ellipsis.svg" alt>
+            </div> <div class="card_hours">
+              <h1 id="social_hours">5hrs</h1>
+              <p id="social_last-week">Last week -10hrs</p>
+            </div>
+
+          </div>
+        </div>
 
         <div class="card_selfcare">
-      <div class="card_head">
-        <img class="card_img" src="images/icon-self-care.svg" alt="">
-      </div>
-      <div class="card_time">
-        <div class="card_nav">
-          <h6>Self-care</h6>
-          <img src="images/icon-ellipsis.svg" alt="">
+          <div class="card_head">
+            <img class="card_img" src="images/icon-self-care.svg" alt>
+          </div>
+          <div class="card_time">
+            <div class="card_nav">
+              <h6>Self-care</h6>
+              <img src="images/icon-ellipsis.svg" alt>
+            </div>
+            <div class="card_hours">
+              <h1 id="selfcares_hours">2hrs</h1>
+              <p id="selfcares_last-week">Last week -2hrs</p>
+            </div>
+
+          </div>
         </div>
-        <h1>2hrs</h1>
-        <p>Last week -2hrs</p>
       </div>
     </div>
-    
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-<!-- 
-  5hrs daily
-  Previous - 7hrs daily
-  32hrs weekly
-  Previous - 36hrs weekly
-  103hrs monthly
-  Previous - 128hrs monthly
-
-  Play
-  1hr daily
-  Previous - 2hrs daily
-  10hrs weekly
-  Previous - 8hrs weekly
-  23hrs monthly
-  Previous - 29hrs monthly
-
-  Study
-  0hrs daily
-  Previous - 1hr daily
-  4hrs weekly
-  Previous - 7hrs weekly
-  13hrs monthly
-  Previous - 19hrs monthly
-
-  Exercise
-  1hr daily
-  Previous - 1hr daily
-  4hrs weekly
-  Previous - 5hrs weekly
-  11hrs monthly
-  Previous - 18hrs monthly
-
-  Social
-  1hr daily
-  Previous - 3hrs daily
-  5hrs weekly
-  Previous - 10hrs weekly
-  21hrs monthly
-  Previous - 23hrs monthly
-
-  Self Care
-  0hrs daily
-  Previous - 1hr daily
-  2hrs weekly
-  Previous - 2hrs weekly
-  7hrs monthly
-  Previous - 11hrs monthly -->
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
